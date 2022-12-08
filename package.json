@@ -4,7 +4,7 @@
   "description": "template project to start TDD with typescript",
   "main": "index.ts",
   "scripts": {
-    "test": "nyc --reporter=text mocha -require ts-node/register  --timeout 50000 $(find test/ -name '*.ts')",
+    "test": "nyc --reporter=text mocha -require ts-node/register  --timeout 50000 $(find . -name '**.spec.ts')",
     "lint": "eslint . --ext .ts"
   },
   "devDependencies": {
