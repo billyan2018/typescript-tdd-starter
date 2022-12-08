@@ -1,7 +1,7 @@
 
 import { expect } from 'chai';
 import { add } from '../sample';
-
+import * as forEach from 'mocha-each';
 
 describe('sample',  () => {
 
@@ -11,4 +11,10 @@ describe('sample',  () => {
 
 
 
+});
+
+describe('add', ()=> {
+  forEach([[1,1,2],[1, -1, 0]]).it('%s + %s = %s', (num, another, sum) => {
+    expect(num + another).to.eq(sum);
+  });
 });
